@@ -33,16 +33,20 @@ Route::delete('/comics/{comic}/', 'ComicsController@destroy')->name('comics.dest
 
 //ROTTE PER CHARACTERS (CRUD)
 // INDEX
-Route::get('/characters', 'charactersController@index')->name('characters.index');
+ Route::get('/characters', 'CharacterController@index')->name('characters.index');
 // CREATE
-Route::get('/characters/create', 'charactersController@create')->name('characters.create');
+Route::get('/characters/create', 'CharacterController@create')->name('characters.create');
 // STORE
-Route::post('/characters', 'charactersController@store')->name('characters.store');
+Route::post('/characters', 'CharacterController@store')->name('characters.store');
 // SHOW
-Route::get('/characters/{character}', 'charactersController@show')->name('characters.show');
+Route::get('/characters/{character}', 'CharacterController@show')->name('characters.show');
 // EDIT
-Route::get('/characters/{character}/edit', 'charactersController@edit')->name('characters.edit');
+Route::get('/characters/{character}/edit', 'CharacterController@edit')->name('characters.edit');
 // UPDATE
-Route::put('/characters/{character}', 'charactersController@update')->name('characters.update');
+Route::put('/characters/{character}', 'CharacterController@update')->name('characters.update');
 // DESTROY
-Route::delete('/characters/{character}/', 'charactersController@destroy')->name('characters.destroy');
+Route::delete('/characters/{character}/', 'CharacterController@destroy')->name('characters.destroy'); 
+
+/* Route::resource('characters','CharacterController')->parameters([
+    'characters' => 'character:id'
+]); */
