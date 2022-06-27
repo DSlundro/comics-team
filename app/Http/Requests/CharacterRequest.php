@@ -26,7 +26,7 @@ class CharacterRequest extends FormRequest
         return [
             'title' => 'required|max:120',
             'description' => 'nullable',
-            'cover_image' => 'nullable',
+            'sales_date' => 'nullable',
         ];
     }
 }

@@ -17,7 +17,7 @@ class CreateCharactersTable extends Migration
             $table->id();
             $table->string('title', 120);
             $table->text('description')->nullable();
-            $table->string('cover_image')->nullable();
+            $table->string('sale_date')->nullable();
             $table->timestamps();
 
         });

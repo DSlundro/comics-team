@@ -8,10 +8,6 @@ Route::get('/', function () {
     return view('comics.home');
 })->name('home');
 
-Route::get('/characters/characters', function(){
-    return view('/characters/characters');
-})->name('characters.characters');
-
 // INDEX
 Route::get('/comics', 'ComicsController@index')->name('comics.index');
 // CREATE
@@ -45,4 +41,12 @@ Route::get('/characters/{character}/edit', 'CharacterController@edit')->name('ch
 // UPDATE
 Route::put('/characters/{character}', 'CharacterController@update')->name('characters.update');
 // DESTROY
+<<<<<<< HEAD
 Route::delete('/characters/{character}/', 'CharacterController@destroy')->name('characters.destroy');
+=======
+Route::delete('/characters/{character}/', 'CharacterController@destroy')->name('characters.destroy'); 
+
+/* Route::resource('characters','CharacterController')->parameters([
+    'characters' => 'character:id'
+]); */
+>>>>>>> e995c0359156cd40045a2fa005d3c6ebef62574c
