@@ -9,6 +9,6 @@ class Character extends Model
     protected $fillable = [
         'title',
         'description',
-        'cover_image',
+        'sales_date',
     ];
 }
