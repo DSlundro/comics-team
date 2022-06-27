@@ -11,7 +11,7 @@
     @csrf
     @method('PUT')
 
-        <!-- @if ($errors->any())
+        @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -19,7 +19,7 @@
                 @endforeach
             </ul>
         </div>
-        @endif -->
+        @endif
 
         <div class="form-group">
             <div class="mb-3">
@@ -54,14 +54,14 @@
         </div>
         <div class="form-group">
         <div class="mb-3">
-                <label for="thumb" class="form-label">Title*</label>
+                <label for="thumb" class="form-label">Description</label>
                 <input 
                 type="text" 
                 name="thumb" 
                 id="thumb" 
                 placeholder="select thumb" 
                 class="form-control @error('thumb') is-invalid @enderror" 
-                value="{{$comic->thumb}}">
+                value="{{$comic->description}}">
                 @error('thumb')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror

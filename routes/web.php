@@ -8,10 +8,6 @@ Route::get('/', function () {
     return view('comics.home');
 })->name('home');
 
-Route::get('/characters/characters', function(){
-    return view('/characters/characters');
-})->name('characters.characters');
-
 // INDEX
 Route::get('/comics', 'ComicsController@index')->name('comics.index');
 // CREATE
@@ -33,7 +29,7 @@ Route::delete('/comics/{comic}/', 'ComicsController@destroy')->name('comics.dest
 
 //ROTTE PER CHARACTERS (CRUD)
 // INDEX
- Route::get('/characters', 'CharacterController@index')->name('characters.index');
+Route::get('/characters', 'CharacterController@index')->name('characters.index');
 // CREATE
 Route::get('/characters/create', 'CharacterController@create')->name('characters.create');
 // STORE

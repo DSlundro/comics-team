@@ -52,17 +52,14 @@
             <th>Img</th>
             <th>Title</th>
             <th>Description</th>
-            <th>Rlease Date</th>
-            <th>Series</th>
-            <th>Type</th>
-            <th>Price</th>
+            <th>Release Date</th>
             <th>Options</th>
         </tr>
 
         @foreach($characters as $character)
         <tr class="">
             <td class="fs-5 fw-bold">{{$character->id}}</td>
-            
+            <td><img src="{{$character->img}}" alt=""></td>            
             <td>{{$character->title}}</td>
             <td class="desc text-justify">{{mb_strimwidth($character->description, 0, 300, "...")}}</td>
             <td class="date">{{$character->sale_date}}</td>
